@@ -1,4 +1,4 @@
-# julia and reac web app for statistics
+# julia and react web app for statistics
 
 visit the web https://statis.herokuapp.com/  to access the interface
 
