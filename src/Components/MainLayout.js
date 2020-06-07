@@ -2,6 +2,37 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 export default class MainLayout extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            pages: [
+                {
+                    name: "Linear programming",
+                    link: "/simplex"
+                },
+                {
+                    name: "spearman rank",
+                    link: "/spearman-rank"
+                },
+                {
+                    name :"test randomness",
+                    link:"/test-randomness"
+                },
+                {
+                    name :"Wilcoxon signed test",
+                    link:"/wilcoxon"
+                },
+                {
+                    name :"Mann Witney",
+                    link:"/mannwitney"
+                },
+                {
+                    name:"chisquare test indep",
+                    link:"chisq-indep"
+                }
+            ]
+        }
+    }
     render() {
         return (
             <div>
@@ -26,36 +57,15 @@ export default class MainLayout extends Component {
               Dashboard <span className="sr-only">(current)</span>
                                         </Link>
                                     </li>
-                                    <li className="nav-item">
-                                        <Link className="nav-link" to="/simplex">
-                                            <span data-feather="file"></span>
-              simplex
-            </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link className="nav-link" to="/">
-                                            <span data-feather="shopping-cart"></span>
-              Products
-            </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link className="nav-link" to="/">
-                                            <span data-feather="users"></span>
-              Customers
-            </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link className="nav-link" to="/">
-                                            <span data-feather="bar-chart-2"></span>
-              Reports
-            </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link className="nav-link" to="/">
-                                            <span data-feather="layers"></span>
-              Integrations
-            </Link>
-                                    </li>
+                                    {
+                                        this.state.pages.map(page =>
+                                            <li className="nav-item">
+                                                <Link className="nav-link" to={page.link}>
+                                                    <span data-feather="file"></span>
+                                                    {page.name}
+                                                </Link></li>
+                                        )
+                                    }
                                 </ul>
 
                                 <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">

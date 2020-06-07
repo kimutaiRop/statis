@@ -104,6 +104,14 @@ git-tree-sha1 = "990109fce06d7064dec0ef6151694fd0f2afd807"
 uuid = "c43c736e-a2d1-11e8-161f-af95117fbd1e"
 version = "0.31.1"
 
+[[GenieAuthentication]]
+deps = ["Genie", "SHA", "SearchLight"]
+git-tree-sha1 = "088bdac6bcfc2c152bed34a32bb534c776fe3816"
+repo-rev = "master"
+repo-url = "https://github.com/GenieFramework/GenieAuthentication.jl"
+uuid = "e115e502-7e3a-11e9-29b2-aba8be6c6778"
+version = "0.3.0"
+
 [[Gumbo]]
 deps = ["AbstractTrees", "Gumbo_jll", "Libdl"]
 git-tree-sha1 = "e711d08d896018037d6ff0ad4ebe675ca67119d4"

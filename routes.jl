@@ -1,6 +1,7 @@
 using Genie, Genie.Router, Genie.Requests, Genie.Renderer.Json
 using Simplex, HTTP, JSON
-
+using Hypothesis
+using CSV
 
 route("/simplex", method = POST) do
     data = jsonpayload()
@@ -29,8 +30,19 @@ route("/simplex", method = POST) do
     HTTP.Response(200, ["access-Control-Allow-Origin" => "*"], body = JSON.json(data))
 end
 
-route("/test")do
-    "hello test"
+route("/spearman")do
+    data = jsonpayload()
+    csv_data = data["url"]
+    has_index = data["has_index"]
+    drop_cols = data["drop_col"]
+
+    read_data =CSV.read(csv_data,header=1,drop=drop_cols)
+    columns = data.columns
+    d = [[0] for x=1:length(columns)]
+    for col_ind in 1:length(columns)
+        d[col_ind] = [read_data[!,col_ind]...]
+    end
+    results = Hypothesis.spermanRank(d)
 end
 
 route("*") do

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Help from './Help'
 import InputProb from './InputProb'
+import TitleHeder from '../Hypothesis/TitleHeder'
 
 class Simplex extends Component {
     constructor(props) {
@@ -16,18 +17,7 @@ class Simplex extends Component {
     render() {
         return (
             <div className="">
-                <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 className="h2">LINEAR PROGRAMMING (SIMPLEX)</h1>
-                    <div className="btn-toolbar mb-2 mb-md-0">
-                        <div className="btn-group mr-2">
-                            <button type="button" className="btn btn-sm btn-outline-secondary">Share</button>
-                            <button type="button" className="btn btn-sm btn-outline-secondary">Export</button>
-                        </div>
-                        <button type="button" className="btn btn-sm btn-outline-secondary dropdown-toggle">
-                            <span data-feather="calendar"></span>This week</button>
-                    </div>
-
-                </div>
+                <TitleHeder topic={"LINEAR PROGRAMMING"} name={"SIMPLEX"}/>
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li className="nav-item">
                         <a className="nav-link active" id="maximization-tab" data-toggle="tab" href="#maximization" onClick={() => this.setState({ prob: 1 })} role="tab" aria-controls="maximization" aria-selected="true">Maximization</a>
