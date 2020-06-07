@@ -30,17 +30,17 @@ route("/simplex", method = POST) do
     HTTP.Response(200, ["access-Control-Allow-Origin" => "*"], body = JSON.json(data))
 end
 
-route("/spearman")do
+route("/spearman") do
     data = jsonpayload()
     csv_data = data["url"]
     has_index = data["has_index"]
     drop_cols = data["drop_col"]
 
-    read_data =CSV.read(csv_data,header=1,drop=drop_cols)
+    read_data = CSV.read(csv_data, header = 1, drop = drop_cols)
     columns = data.columns
-    d = [[0] for x=1:length(columns)]
+    d = [[0] for x in 1:length(columns)]
     for col_ind in 1:length(columns)
-        d[col_ind] = [read_data[!,col_ind]...]
+        d[col_ind] = [read_data[!, col_ind]...]
     end
     results = Hypothesis.spermanRank(d)
 end
@@ -48,4 +48,3 @@ end
 route("*") do
     serve_static_file("index.html")
 end
-
