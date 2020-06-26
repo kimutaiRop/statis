@@ -22,7 +22,7 @@ export default class DrawTables extends Component {
                                     <tbody>
                                         <tr style={{ padding: "6px", border: "1px solid lightgrey" }}>
                                         <th colSpan={this.props.col_names[T_IND].length + 1} style={{ padding: "6px", border: "1px solid lightgrey" }}>
-                                            {T_IND + 1}<sup>{T_IND + 1 === 1 ? "th" : T_IND + 1 === 2 ? "nd" : T_IND + 1 === 3 ? "rd" : "th"}</sup> TABLEU
+                                                {T_IND + 1}<sup>{String(T_IND + 1).charAt(String(T_IND + 1).length - 1) === 1 ? "th" : String(T_IND + 1).charAt(String(T_IND + 1).length - 1) === 2 ? "nd" : String(T_IND + 1).charAt(String(T_IND + 1).length - 1) === 3 ? "rd" : "th"}</sup> TABLEU
                                         </th>
                                         </tr>
                                         <tr>

@@ -84,19 +84,19 @@ export default class MainLayout extends Component {
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/">
                                             <span data-feather="file-text"></span>
-              Last quarter
+              Hekp contribute
             </Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/">
                                             <span data-feather="file-text"></span>
-              Social engagement
+              Analysis help
             </Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/">
                                             <span data-feather="file-text"></span>
-              Year-end sale
+              Contact
             </Link>
                                     </li>
                                 </ul>
