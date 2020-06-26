@@ -1,1 +1,1 @@
-web: julia --project src/statika.jl $PORT
+web: julia --project src/Statika.jl $PORT
