@@ -2,7 +2,11 @@
 
 you can download this appliction and set up to run localy in your machine
 
-this steps assume that you are in the project folder
+these steps assume that you are in the project folder `(statis)`
+
+start :
+
+install julia doenload from https://julialang.org/downloads/
 
 **$**`npm install`
 
@@ -10,14 +14,20 @@ this will install react modules we need
 
 **$**`npm run build`
 
-this will make the frontend files for genie by comppiling the react jsx code
+this will make the frontend files for genie by compiling the react jsx code and create build,
+I prefer this to running two servers, (react and genie) in local machine
 
-## start server on linux
+however, if you are contributing then running both will save you alot of time, you dont have to worry...
+I took care of the cors origins for all servers in genie already as log as you dont mess up where you should not
+
+## start server
+
+### on unix system
 
 **$** `bin/serve`
-this will start genie server if on unix
+this will start genie server if on unix, this will also take care of modules needed
 
-## on windows
+### on windows
 
 **/bin>**`cd bin`
 
@@ -25,16 +35,16 @@ to first move to the directory bin in the projecvt folder
 
 **click** the `server` file to start server if you hate cmd and terminals
 
-or run 
+or run  
 
 **/bin>** `server`
 
 if you love them
 
-## need ready setup?
+## need ready setup
 
-visit the web https://statis.herokuapp.com/  to access the interface and select https://statis.herokuapp.com/simplex
-**lienar programming**
+visit the web https://statis.herokuapp.com/  to access the interface and  
+select https://statis.herokuapp.com/simplex **linear programming**
 
 ## help add new features and programs as contributer
 
