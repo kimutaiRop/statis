@@ -33,7 +33,8 @@ if you love them
 
 ## need ready setup?
 
-visit the web https://statis.herokuapp.com/  to access the interface
+visit the web https://statis.herokuapp.com/  to access the interface and select https://statis.herokuapp.com/simplex
+**lienar programming**
 
 ## help add new features and programs as contributer
 
