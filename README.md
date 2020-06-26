@@ -31,7 +31,7 @@ this will start genie server if on unix, this will also take care of modules nee
 
 **/bin>**`cd bin`
 
-to first move to the directory bin in the projecvt folder
+to first move to the directory bin in the project folder
 
 **click** the `server` file to start server if you hate cmd and terminals
 
@@ -45,6 +45,8 @@ if you love them
 
 visit the web https://statis.herokuapp.com/  to access the interface and  
 select https://statis.herokuapp.com/simplex **linear programming**
+
+you can see creenshot included in the project folder
 
 ## help add new features and programs as contributer
 
