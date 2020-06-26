@@ -1,16 +1,13 @@
 using Genie.Configuration, Logging
 
 const config = Settings(
-  server_port                     = 8000,
-  server_host                     = "0.0.0.0",
-  log_cache                       = false,
-  log_formatted                   = false,
-  log_level                       = Logging.Error,
-  log_views                       = false,
-  log_to_file                     = true,
-  server_handle_static_files      = false,
-  flax_autoregister_webcomponents = false,
-  cors_allowed_origins = [
+    server_port = 8000,
+    server_host = "0.0.0.0",
+    log_level = Logging.Debug,
+    log_to_file = false,
+    server_handle_static_files = true,
+    websockets_server = false,
+    cors_allowed_origins = [
         "http://localhost:3000",
         "http://localhost:8000",
         "localhost",
@@ -28,4 +25,4 @@ const config = Settings(
     server_document_root = "build",
 )
 
-ENV["JULIA_REVISE"] = "off"
+ENV["JULIA_REVISE"] = "auto"
